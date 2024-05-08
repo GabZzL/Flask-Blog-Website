@@ -1,0 +1,45 @@
+    <!-- Header-->
+    {% include 'header.html' %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../static/assets/img/milky-way.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Physics World</h1>
+                            <span class="subheading">Somo quotes about the Physics World</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    {%  for blog in blogs: %}
+
+                        <div class="post-preview">
+                            <a href="{{ url_for('get_post', blog_id=blog.id) }}">
+                                <h2 class="post-title">{{ blog.title }}</h2>
+                                <h3 class="post-subtitle">{{ blog.subtitle }}</h3>
+                            </a>
+                            <p class="post-meta">
+                                Author:
+                                <a href="https://www.instagram.com/gabriel_lopzzz/?igsh=MWk4a3lzdWZreXJ5cg%3D%3D">{{ blog.author }}</a>
+                                on {{ blog.date }}
+                            </p>
+                        </div>
+
+                        <!-- Divider-->
+                        <hr class="my-4" />
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        {% include 'footer.html' %}

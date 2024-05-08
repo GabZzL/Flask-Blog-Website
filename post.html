@@ -1,0 +1,40 @@
+<!-- Header-->
+    {% include 'header.html' %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../static/assets/img/creation-pillars.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="post-heading">
+                            <h1>{{ blog.title }}</h1>
+                            <h2 class="subheading">{{ blog.subtitle }}</h2>
+                            <span class="meta">
+                                Author
+                                <a href="https://www.instagram.com/gabriel_lopzzz/?igsh=MWk4a3lzdWZreXJ5cg%3D%3D">{{ blog.author }}</a>
+                                on {{ blog.date }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+
+                        <p>{{ blog.body }}</p>
+
+                        <p>
+                            Placeholder text by
+                            <a href="https://www.goodreads.com">Good Reads</a>
+                            &middot; Images by
+                            <a href="https://unsplash.com">Unsplash</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+       <!-- Footer-->
+        {% include 'footer.html' %}
